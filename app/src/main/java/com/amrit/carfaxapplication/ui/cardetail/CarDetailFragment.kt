@@ -103,7 +103,7 @@ class CarDetailFragment : Fragment() {
         arguments?.getString("transmission")?.let { binding.transValue.text = it }
         arguments?.getString("engine")?.let { binding.engineValue.text = it }
         arguments?.getString("bodyType")?.let { binding.bodyValue.text = it }
-        arguments?.getString("fuel")?.let { binding.fuelTV.text = it }
+        arguments?.getString("fuel")?.let { binding.fuelValue.text = it }
         binding.progressBar.visibility = View.GONE
     }
 

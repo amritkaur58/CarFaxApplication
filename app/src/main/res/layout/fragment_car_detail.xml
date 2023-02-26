@@ -85,161 +85,228 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/top_layout">
 
-
-                <TextView
-                    android:id="@+id/locationTV"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/locationLL"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/location" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/locationValue"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/locationTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/location" />
+
+                    <TextView
+                        android:id="@+id/locationValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/exLL"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_toEndOf="@+id/locationTV"
-                    android:textColor="@color/black" />
+                    android:layout_below="@+id/locationLL"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/exColor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/exterior_color" />
+
+                    <TextView
+                        android:id="@+id/exeValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
 
 
-                <TextView
-                    android:id="@+id/exColor"
-                    android:layout_width="wrap_content"
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/interLL"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/locationTV"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/exterior_color" />
+                    android:layout_below="@+id/exLL"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/exeValue"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/interiorTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/interior_color" />
+
+                    <TextView
+                        android:id="@+id/interValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driveLL"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/locationTV"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@+id/exColor"
-                    android:textColor="@color/black" />
+                    android:layout_below="@+id/interLL"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/interiorTV"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/driveTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/drive_type" />
+
+                    <TextView
+                        android:id="@+id/driveValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/transLL"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/exColor"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/interior_color" />
+                    android:layout_below="@id/driveLL"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/interValue"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/transTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/transmission" />
+
+                    <TextView
+                        android:id="@+id/transValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bodyLL"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/exColor"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@+id/interiorTV"
-                    android:textColor="@color/black" />
+                    android:layout_below="@+id/transLL"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:id="@+id/bodyTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/body_style" />
 
-                <TextView
-                    android:id="@+id/driveTV"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/bodyValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/engineLL"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/interiorTV"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/drive_type" />
+                    android:layout_below="@+id/bodyLL"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/driveValue"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/engineTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/engine" />
+
+                    <TextView
+                        android:id="@+id/engineValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fuelLL"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/interiorTV"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@+id/driveTV"
-                    android:textColor="@color/black" />
+                    android:layout_below="@id/engineLL"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/transTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/driveTV"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/transmission" />
+                    <TextView
+                        android:id="@+id/fuelTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/fuel" />
 
-                <TextView
-                    android:id="@+id/transValue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/driveTV"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@+id/transTV"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/bodyTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/transTV"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/body_style" />
-
-                <TextView
-                    android:id="@+id/bodyValue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/transTV"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@+id/bodyTV"
-                    android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/fuelValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
 
 
-                <TextView
-                    android:id="@+id/engineTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/bodyTV"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/engine" />
-
-                <TextView
-                    android:id="@+id/engineValue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/bodyTV"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@+id/engineTV"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/fuelTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/engineTV"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/fuel" />
-
-                <TextView
-                    android:id="@+id/fuelValue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/engineTV"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@+id/fuelTV"
-                    android:textColor="@color/black" />
+                </LinearLayout>
 
                 <View
                     android:id="@+id/view"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_below="@+id/fuelTV"
+                    android:layout_below="@+id/fuelLL"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:background="@color/gray_dark" />
 
                 <Button
+                    android:id="@+id/callButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/view"
@@ -249,7 +316,6 @@
                     android:layout_marginBottom="18dp"
                     android:background="@color/colorPrimary"
                     android:text="@string/call_dealer"
-                    android:id="@+id/callButton"
                     android:textColor="@color/white" />
             </RelativeLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
